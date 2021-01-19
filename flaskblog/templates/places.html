@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+<style>
+  img
+  {
+    width: 100%;
+    height: 400px;
+  }
+
+  h3,h4
+  {
+    font-family: Comic Sans MS, cursive;
+  }
+
+  i
+  {
+    text-shadow:2px 2px 3px lightgray;
+  }
+  .pp
+  {
+    font-size: 30px;
+  }
+</style>
+ 
+<div style="top: 60px;position: relative;">
+
+<div id="demo" class="container carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+  </ul>
+
+      <article class="media">
+          <div class="media-body">
+            {% for c in placedetails %}
+            <div class="article-metadata">
+              <a class="mr-5" style="font-size: 45px;"><b>{{ c.city_name }}</b></a>
+              <p class="text-muted">
+                <h4>Ratings : <b>{{c.ratings }}</b>
+                    <i class="fa fa-star" style="color:yellow;"></i>
+              </h4>
+
+            </p>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ c.imgUrl }}">
+                <div class="carousel-caption">
+                  <p class="pp article-content">{{ c.city_name }}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </article>
+    
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<div class="container">
+  <hr>
+<br>
+  <h3>Description : </h3>
+  <h4 style="text-indent: 4em;">{{ c.description }}</h4>
+<br>
+<br>
+<br>
+
+</div>
+
+
+<div class="container">
+  <a style="font-size: 45px;"><b>TOP PLACES TO VISIT IN {{ c.city_name }}</b></a>
+  <br><br><br>
+  <div class="card-deck">
+    <div class="row">
+      {% for p in place %}
+      <div class="card-deck">
+      <div class="col-4"style="margin-bottom: 30px;">
+      <div class="card" style="width:360px">
+        <img class="card-img-top" src="{{ p.imgUrl }}" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{ p.place_name }}</h4>
+          <h5>
+              <i class="fa fa-star" style="color:yellow;"></i>
+              <b>{{ p.ratings }}</b>
+          </h5>
+          <p class="card-text">
+            {{ p.description }}
+          </p>
+          <a href="" class="stretched-link"></a>
+        </div> 
+      </div> 
+      </div>
+      </div> 
+      {% endfor %}
+    </div>
+  </div>
+</div>
+ 
+</div>
+<br><br><br>
+<hr>
+
+<!--Google map-->
+<a style="font-size: 45px;"><b>Find your Destination using Maps</b></a>
+<br>
+<br>
+<style type="text/css">
+    .map-container{
+overflow:hidden;
+padding-bottom:25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+</style>
+
+<div id="map-container" class="z-depth-1-half map-container" style="height: 500px" >
+  <iframe src="https://maps.google.com/maps?q={{ c.city_name }}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen>
+  </iframe>
+</div>
+{% endfor %}
+<br>
+<br>
+</div>
+
+{% endblock content %}
+

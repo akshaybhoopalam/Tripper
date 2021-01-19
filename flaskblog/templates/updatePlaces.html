@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    body
+    {
+        background-color: white;
+    }
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='register_style.css') }}">
+
+<div style="top: 70px;position: relative;">
+
+    <div class="content-section" style="position: static; left: 190px; top: 80px; z-index: -1; padding-top: 10px;">
+
+        <legend class="border-bottom mb-4">
+                    <h2 style="color: orangered;">UPDATE PLACE</h2>
+                </legend>
+
+
+      <form class="form-inline" method="POST" action="{{ url_for('updateplacename') }}">
+            <div class="form-group">
+              <div class="input-group">
+                  <label>SELECT PLACE | </label>
+                      <select name="updateplace" class="selectpicker form-control">
+                        {% for c in places %}
+                        <option  value="{{ c.place_name}}">{{ c.place_name }}</option>
+                        <h2 >{{ c }}</h2>
+                        {% endfor %}
+                      </select>
+              </div>
+              <hr>
+              {{ form.ratings.label(class="form-control-label") }}
+              {% if form.ratings.errors %}
+                  {{ form.ratings(class="form-control form-control-lg is-invalid") }}
+                  <div class="invalid-feedback">
+                      {% for error in form.ratings.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ form.ratings(class="form-control form-control-lg") }}
+              {% endif %}
+
+               
+                <button type="submit" class="signupbtn">Update</button>
+                <button type="reset" class="cancelbtn">Reset</button>
+
+            </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>   
+{% endblock content %}

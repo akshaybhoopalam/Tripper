@@ -1,0 +1,73 @@
+city_id,cities,category
+1,Thirthahalli,Nature|HillStation
+2,Mysore,Historic|Amusement|HillStation
+3,Dharwad,Historic
+4,Udupi,Temple|Beach
+5,Mangalore,Beach
+6,Kolkata,Beach|Historic
+7,Chennai,Beach
+8,Bangalore,Historic|Amusement|HillStation
+9,Tumkur,Historic|HillStation
+10,Madurai,Temple|Historic
+11,Wayanad,Nature|HillStation
+12,Virajpet,Nature|HillStation
+13,Haveri,Historic|Temple
+14,New Delhi,Historic|Amusement
+15,Mumbai,Historic|Beach|Amusement
+16,Hampi,Historic|Temple
+17,Trivandrum,HillStation|Beach
+18,Cochin,Historic|Beach
+19,Mulbagal,Historic|Temple
+20,Jaipur,Historic|Temple
+21,Goa,Beach|Amusement
+22,Coorg,Nature|HillStation
+23,Delhi,Historic|Amusement
+24,Ooty,HillStation|Nature
+25,Hyderabad,Beach|Amusement
+26,Shimoga,Nature|HillStation
+27,Belgaum,Historic|Temple
+28,Kanyakumari,Beach|Temple
+29,Bareilly,Temple
+30,Pondicherry,Beach|Amusement
+31,Hassan,Temple|Historic
+32,Bijapur,Historic
+33,Hubli,Temple
+34,Nashik,Temple
+35,Chikmagalur,Nature|HillStation
+36,Udaipur ,Historic
+37,Bellary,Historic
+38,Hindupur,Temple
+39,Kodai,Nature|HillStation
+40,Chikmagalur ,Nature|HillStation
+41,Davangere,Historic|Temple
+42,Coorg  ,Nature|HillStation
+43,Srirangapatna,Historic|Temple
+44,Allapey,Nature|HillStation
+45,Tirupathi,Temple
+46,Coorg ,Nature|HillStation
+47,Mandya,Historic
+48,Gadag,Historic
+49,Uttarakhand,Historic
+50,Chittoor,Temple
+51,Kerala,Nature|HillStation
+52,Yercaud,Nature|HillStation
+53,Devala,HillStation
+54,Ahmedabad ,Historic
+55,Agra,Historic|Nature
+56,Gauribidanur,Temple
+57,Gokak,Historic
+58,Koppal,Historic
+59,Patna,Historic
+60,Manipal ,Beach
+61,Kudremukh,Nature|HillStation
+62,Raichur,Historic
+63,Sikkim,Nature|HillStation
+64,Shirdi,Temple
+65,Mantralaya,Temple
+66,Nanjangudu,Temple
+67,Salem,Historic
+68,Tirupathi ,Temple
+69,Indore,Historic
+70,Nasik,Temple
+71,Kashmir,Nature|HillStation
+72,Dharmastala,Temple

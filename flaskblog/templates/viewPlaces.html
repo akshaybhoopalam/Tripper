@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="container">
+    	<h1 style="color: orangered;">PLACES INFO</h1>
+    	<br>
+    	<div class="row">
+        {% for p in place %}
+   		<div class="col-4"style="margin-bottom: 30px;">
+	    <div class="card" style="width:350px; height: 400px;">
+		  <img id="myImg" class="card-img-top" src="{{ p.imgUrl }}" style="height: 200px" alt="Card image">
+		  <div class="card-body">
+		    <h3 class="card-title">{{ p.place_name }}</h3>
+		    <h4 class="card-text">{{ p.ratings }} <i class="fa fa-star" style="color:yellow;"></i> </h4>
+		    <h4 class="card-text">Category </h4>
+			    {% for p2 in p.category %}
+			    	{{ p2 }} &emsp;
+			    {% endfor %}
+		  </div>
+		</div>
+		</div>
+		{% endfor %}
+		</div>
+
+	</div>
+{% endblock content %}

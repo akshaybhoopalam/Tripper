@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<style type="text/css">
+	.img1
+    {
+        /*position: fixed;*/
+        /*background-image: url("static/images/mr_worldwide.gif");*/
+        background-image: url("static/images/businessman-profile-icon-male.jpg");
+        background-repeat: no-repeat;
+        /*left: 500px;*/
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-size: 300px 300px;
+    }
+    body
+    {
+    	background-color: white;
+    }
+    .align
+    {
+    	position: fixed;
+    	top: 500px;
+        left: 500px;
+    }
+    
+</style>
+<center>
+    <h1>My Tripper Account</h1>
+    <br>
+    <div class="img1"></div>
+    <div class="align">
+    {% if 'username' in session: %}
+        <a class="nav-item nav-link" href="">
+	        <h2>logged in as : {{session['username']}}</h2>
+	    </a>
+        <a class="nav-item nav-link" href="{{ url_for('logout') }}">
+	        <h3 style="color: red;"><u>Logout</u></h3>
+	    </a>
+	</div>
+</center>
+    {% endif %}
+{% endblock content %}

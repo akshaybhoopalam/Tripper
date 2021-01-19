@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+<a class="mr-5" style="font-size: 45px;color: crimson"><b>SELECT CATEGORIES</b></a>
+<form action="{{ url_for('showOutput') }}" method="POST">
+			<div>
+            <p> <strong><font size="6" color="Maroon">Nature </font></strong><br/></p>
+            <table>
+                <tr>
+                    <th><input type="radio" name="Nature" value="0" checked> Unlike | </th>
+                    <th><input type="radio" name="Nature" value="1" > Like </th>
+                </tr>
+            </table>
+            </div><br/>
+
+			<div>
+            <p> <strong><font size="6" color="Maroon">HillStation </font></strong><br/></p>
+            <table>
+                <tr>
+                    <th><input type="radio" name="HillStation" value="0" checked> Unlike | </th>
+                    <th><input type="radio" name="HillStation" value="1" > Like </th>
+                </tr>
+            </table>
+            </div><br/>
+
+            <div>
+            <p> <strong><font size="6" color="Maroon">Amusement </font></strong><br/></p>
+            <table>
+                <tr>
+                    <th><input type="radio" name="Amusement" value="0" checked> Unlike | </th>
+                    <th><input type="radio" name="Amusement" value="1" > Like </th>
+                </tr>
+            </table>
+            </div><br/>
+            
+            <div>
+            <p> <strong><font size="6" color="Maroon">Temple </font></strong><br/></p>
+            <table>
+                <tr>
+                    <th><input type="radio" name="Temple" value="0" checked> Unlike | </th>
+                    <th><input type="radio" name="Temple" value="1" > Like </th>
+                </tr>
+            </table>
+            </div><br/>
+
+            <div>
+            <p> <strong><font size="6"  color="Maroon">Beach </font></strong><br/></p>
+            <table>
+                <tr>
+        			<th><input type="radio" name="Beach" value="0" checked> Unlike | </th>
+                    <th><input type="radio" name="Beach" value="1" > Like </th>
+                </tr>
+            </table> 
+            </div><br/>
+                
+            <div>
+            <p> <strong><font size="6" color="Maroon">Historic </font></strong><br/></p>
+            <table>
+                <tr>
+            		<th><input type="radio" name="Historic" value="0" checked> Unlike | </th>
+                    <th><input type="radio" name="Historic" value="1" > Like </th>
+                </tr>
+            </table>
+            </div> <br/>
+
+	<button type="submit" class="btn btn-success" style="width: 200px;"><strong>Go</strong></button>
+	<br><br>
+</form>
+</div>
+{% endblock content %}

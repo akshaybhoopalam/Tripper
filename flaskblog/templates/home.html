@@ -1,0 +1,716 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body
+      {
+        background: ivory;
+      }
+      .image
+      {
+        height: 400px;
+        width: 1000px;
+        left: 300px;
+        position: absolute;
+        background-image: url("static/images/Tour.jpg");
+        background-size: 856px 400px;
+      }
+      .darkFront
+        {
+            height: 500px;
+            width: 1500px;
+            position: absolute;
+            top: 0px;
+            left: 18px;
+            background-color: cadetblue;
+            opacity: 0.2;
+        }
+
+        .home, .about, .contact
+        {
+            left: 50px;
+            animation-duration: 0.7s;
+            opacity: 0.9;
+        }
+
+        .home
+        {
+            animation-name: exampleHome;
+            font-size: 100px;
+            position: absolute;
+            top: 340px;
+            color: cadetblue;
+            font-family: times new roman;
+        }
+
+        .about, .contact
+        {
+            animation-name: example;
+            font-size: 60px;
+            font-family: times new roman;
+            color: white;
+            background-color: cadetblue;
+            opacity: 0.8;
+            width: 100%;
+            height: 90px;
+            padding-right: 50px;
+        }
+
+        @keyframes example 
+        {
+            0% {font-size: 60px;}
+            50% {font-size: 70px;}
+            100% {font-size: 60px;}
+        }
+
+        @keyframes exampleHome 
+        {
+            0% {font-size: 100px;}
+            50% {font-size: 110px;}
+            100% {font-size: 100px;}
+        }
+        
+        .t, .r1, .i, .p1, .p2, .e, .r2
+        {
+            font-family: times new roman;
+            color: white;
+            position: absolute;
+        }
+        .t, .r1, .i, .p1, .p2, .e, .r2
+        {
+            font-size: 200px;
+            top: 50px;
+        }
+        .t
+        {
+            left: 310px;
+        }
+        .r1
+        {
+            left: 450px;
+        }
+        .i
+        {
+            left: 620px;
+        }
+        .p1
+        {
+            left: 745px;
+        }
+        .p2
+        {
+            left: 885px;
+        }
+        .e
+        {
+            left: 1020px;
+        }
+        .r2
+        {
+            left: 1160px;
+        }
+        .one, .two, .three
+        {
+            color: black;
+            padding-left : 100px;
+            padding-right : 100px;
+        }
+        .one
+        {
+            font-size: 40px;
+            top: 550px;
+            text-indent: 2em;
+        }
+        .two
+        {
+            font-size: 30px;
+            top: 750px;
+            left: 200px;
+        }
+        .three
+        {
+            font-size: 60px;
+            top: 840px;
+            left: 400px;
+            color: gray;
+        }
+
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .contactBg
+  {
+    background-color: lightblue;
+    height: 200px;
+    position: relative;
+    padding-top: 40px;
+  }
+
+  .article-title
+  {
+    color: white;
+    font-family: Brushstroke, fantasy;
+    text-shadow: 0px 0px 6px white;
+  }
+  </style>
+
+
+    <div class="image"></div>
+    <div class="darkFront"></div>
+
+    <div class="t">T</div>
+    <div class="r1">R</div>
+    <div class="i">I</div>
+    <div class="p1">P</div>
+    <div class="p2">P</div>
+    <div class="e">E</div>
+    <div class="r2">R</div>
+    
+
+    <div class="home">Home</div>
+        <a name="homeDiv" style="position: absolute;top: 290px;"/>
+
+<!-- slider start -->
+<a href=""></a>
+
+<!-- slider end -->
+
+<!-- website design -->
+
+<style type="text/css">
+    
+    .customDiv1
+    {
+        background-color: lightblue;
+        height: 400px;
+        margin: 10px;
+    }
+    .customDiv2
+    {
+        background-color: gray;
+        height: 200px;
+        margin: 10px;
+    }
+    .customDiv3
+    {
+        background-color: lightgray;
+        height: 300px;
+        margin: 10px;
+    }
+    .customDiv4
+    {
+        background-color: crimson;
+        border-radius: 50%;
+        height: 330px;
+        margin: 10px;
+    }
+
+</style>
+<br>
+<!-- <div  style="padding-top: 540px;position: relative;">
+    <div id="demo" class="container-fluid carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+    
+      </ul> -->
+    
+                <!-- <div class="carousel-inner"> -->
+                    
+                  <!-- <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/mountain_peak.jpg')}}">
+                    <div class="carousel-caption">
+                        <a class="article-title" href="#"><h2>Mountain Treking</h2></a>
+                      <p class="pp article-content">Himalayas</p>
+                    </div>
+                  </div>
+    
+                  <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/palace_beauty.jpg')}}">
+                    <div class="carousel-caption">
+                        <a class="article-title" href="#"><h2>Historical Places</h2></a>
+                      <p class="pp article-content">Mysuru Palace</p>
+                    </div>
+                  </div>
+    
+                  <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/Forest-landscape-trail-sunshin.jpg')}}">
+                    <div class="carousel-caption">
+                        <a class="article-title" href="#"><h2>Green Forest</h2></a>
+                      <p class="pp article-content">Nagarahole</p>
+                    </div>
+                  </div>
+     -->           <!--  </div>
+            </div>
+          </article>
+        
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+</div>
+ -->
+
+<style>
+    #parent3 #popup3 {
+      display: none;
+    }
+    #parent3:hover #popup3 {
+      display: block;
+    }
+    
+</style>
+
+    <div  style="padding-top: 540px;position: relative;">
+        <article class="media">
+            <div class="media-body">
+                <div style="left:300px;position: relative;">
+                <a class="mr-2" style="font-size: 30px;">
+                <p class="text-muted"><b>TOP RATED </b>April 20, 2020</p></a>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        {% for c in city %}
+                        <div class="col-md-4">
+                            <div class="card" id="parent3" style="width:450px;height: 300px;background-color: gray;">
+                              <img src="{{ c.imgUrl }}" style="width:100%;height: 100%;">
+                              <div class="card-body" style="position: absolute;">
+                                <h2 class="card-title" style="color: white;">{{ c.city_name }}</h2>
+                                <h3 class="card-text" style="color: white; font-size: 25px;">Ratings : {{ c.ratings }}</h3>
+                              </div>
+                              <div id="popup3" style="width: 400px;left: 280px; top: -60px;position: relative;font-size: 20px;">
+                                <a href="{{url_for('places',id=c.city_name) }}" style="color: white;">View details</a>
+                              </div>
+                            </div>
+
+
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+<!--     
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card" style="width:420px;height: 300px">
+            <div class="card-body">
+              <h4 class="card-title">-</h4>
+              <p class="card-text">.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card" style="width:610px;height: 300px">
+            <div class="card-body">
+              <h4 class="card-title">-</h4>
+              <p class="card-text">.</p>
+            </div>
+            </div>
+        </div>  
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="card" style="width:610px;height: 300px">
+            <div class="card-body">
+              <h4 class="card-title">-</h4>
+              <p class="card-text">.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card" style="width:420px;height: 300px">
+            <div class="card-body">
+              <h4 class="card-title">-</h4>
+              <p class="card-text">.</p>
+            </div>
+            </div>
+        </div>  
+    </div>
+</div>
+ -->
+<br><br><br><hr>
+<br><br><br>
+
+<!-- <style>
+    #parent #popup {
+      display: none;
+    }
+    #parent:hover #popup {
+      display: block;
+    }
+    
+</style> -->
+
+<script src="{{url_for('static', filename='js/cardScript.js')}}"></script>
+<style type="text/css">
+    
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  min-width: 780px;
+  width: 100%;
+  height: 500px;
+}
+
+.card {
+  position: relative;
+  background-color: #FFFFFF;
+  height: 370px;
+  width: 240px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  transition: height 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  height: 410px;
+  box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.5);
+}
+
+.card-image {
+  /* center horizontally overflown image */
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+
+  height: 220px;
+  min-width: 100%;
+  transition: height 0.3s, opacity 0.3s;
+}
+.card-image.selected {
+  height: 410px;
+  opacity: 0.3;
+}
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  height: 130px;
+  padding: 10px 15px;
+  font-family: Helvetica;
+}
+
+.card-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.card-title {
+  font-family: Serif;
+}
+.card-author {
+  font-size: 14px;
+  color: #BAB096;
+  transition: color 0.3s;
+}
+.card-author.selected {
+  color: #6a6456;
+}
+
+.categoriesAnime1
+{
+  transition: height 1s;
+}
+.categoriesAnime1:hover
+{
+  position: relative;
+  height: 350px;
+}
+
+.categoriesAnime2
+{
+  transition: height 1s;
+}
+.categoriesAnime2:hover
+{
+  position: relative;
+  height: 250px;
+}
+
+.categoriesAnime3
+{
+  transition: height 1s;
+}
+.categoriesAnime3:hover
+{
+  position: relative;
+  height: 270px;
+}
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="customDiv3 categoriesAnime1" id="parent">
+                <img src="https://live.staticflickr.com/3784/9255557394_e89b401da9_b.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" class="" style="width: 600px;left: 400px; top: -250px;position: relative;">
+                    <h1><b>NATURE</b></h1>
+                    <p>“If you truly love nature, you will find beauty everywhere.” "Nature always wears the colors of the spirit." "Look deep into nature, and then you will understand everything better." "Just living is not enough.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="customDiv2 categoriesAnime2" id="parent">
+                <img src="https://www.holidify.com/images/bgImages/MANALI.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" style="width: 500px;left: -570px; top: -180px; text-align: right;position: relative;">
+                    <h1><b>HILL STATION</b></h1>
+                    <p>“Somewhere between the bottom of the climb and the summit is the answer to the mystery why we climb.” -Greg Child</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="customDiv2 categoriesAnime2" id="parent">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/90/86/be/carnival-of-lights-at.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" style="width: 600px;left: 400px; top: -180px;position: relative;">
+                    <h1><b>AMUSEMENT</b></h1>
+                    <p>"I look just like the girls next door... if you happen to live next door to an amusement park. Don't worry; don't be afraid, ever, because this is just a ride."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="customDiv3 categoriesAnime1" id="parent">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Nadi_Sri_Siva_Subramaniya_Temple.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" style="width: 500px;left: -570px; top: -250px; text-align: right;position: relative;">
+                    <h1><b>TEMPLE</b></h1>
+                    <p>"I love you when you bow in your mosque, kneel in your temple, pray in your church. For you and I are sons of one religion, and it is the spirit. The doorstep to the temple of wisdom is a knowledge of our own ignorance."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+<br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="customDiv2 categoriesAnime3" id="parent">
+                <img src="https://www.fodors.com/wp-content/uploads/2019/12/WinterBeachEscapes__HERO_shutterstock_1271867908.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" style="width: 300px; top: -270px; left: 10px; position: relative;">
+                    <h1><b>BEACH</b></h1>
+                </div>
+                <div id="popup" style="width: 300px; top: -50px; position: relative;">
+                    <p>Never give up for that is just the place and time that the tide will turn. <br>Leave footprints of love and kindness wherever you go.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="customDiv2 categoriesAnime3" id="parent">
+                <img src="https://www.roadaffair.com/wp-content/uploads/2017/12/taj-mahal-india-shutterstock_180918317-1024x683.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" style="width: 300px; top: -260px; left: 10px; position: relative;">
+                    <h1><b>HISTORIC</b></h1>
+                </div>
+                <div id="popup" style="width: 300px; top: -50px; position: relative;">
+                    <p>Our greatest glory is not in never falling, but in rising every time we fall.<br> We are not makers of history. We are made by history.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="customDiv2 categoriesAnime3" id="parent">
+                <img src="https://i.pinimg.com/originals/e4/82/17/e48217733a7032c1f61f2baa51fb2ee6.jpg" style="height: 100%;width: 100%;">
+                <div id="popup" style="width: 300px; top: -260px; left: 10px; position: relative;">
+                    <h1><b>COMBO</b></h1>
+                </div>
+                <div id="popup" style="width: 300px; top: -50px; position: relative;">
+                    <p>Never give up for that is just the place and time that the tide will turn. Leave footprints of love and kindness wherever you go.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+<br><br><br>
+
+<!-- website design end -->
+
+
+<!-- About us page -->
+
+    <div class="about" style="padding-left: 50px;">
+      <a name="aboutDiv" style="padding-top: 80px;"/>About us
+    </div>
+
+<br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" style="width:1090px;height: 300px;background-color: crimson;">
+            <div class="card-body">
+              <!-- <h4 class="card-title">-</h4>
+              <p class="card-text">.</p> -->
+              <p class="one card-title" style="color: white;">Tripper, a travel recommendation system intended to help users in choosing the places by recommendation and provide certain information about that place.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card img2" style="width:520px;height: 200px">
+            <div class="card-body">
+              <h4 class="card-title">We recommend users thier place of interest based on thier valuable input.</h4>
+              
+    <style type="text/css">
+        .img2
+        {
+            position: relative;
+            background-image: url("static/images/mr_worldwide.gif");
+            background-repeat: no-repeat;
+            /*left: 500px;*/
+            width: 150px;
+            height: 100px;
+            /*background-size: 150px 100px;*/
+            /*border-radius: 100%;*/
+        }
+    </style>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card" style="width:520px;height: 200px">
+            <div class="card-body">
+              <h4 class="card-title">Find your Destination!</h4>
+              <p class="card-text">“Sometimes when you lose your way, you find YOURSELF.” “There's something about arriving in new cities, wandering empty streets with no destination. I will never lose the love for the arriving, but I'm born to leave.”</p>
+              <form action="{{ url_for('getInput') }}" method="GET" style="left: 100px;">
+                    <button type="submit" class="btn btn-success stretched-link"><strong>CLICK HERE</strong></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+<br><br>
+
+<!-- Contact us page   -->
+    <hr>
+    <div class="contact" style="padding-left: 50px;">
+      <a name="contactDiv" style="padding-top: 80px;"/>Contact us
+    </div>
+
+<br><br>
+<style>
+    #parent2 #popup2 {
+      display: none;
+    }
+    #parent2:hover #popup2 {
+      display: block;
+    }
+    
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div id="parent2" class="customDiv4 card card-body" style="height: 330px; width: 330px">
+                <img src="{{url_for('static', filename='images/akshayba.jpg')}}" style="width:370px;height: 330px;left: -41px;transform:rotate(90deg);position: relative;">
+                
+            </div>
+            <div id="popup2" style="width: 300px; top: 10px; position: relative;">
+                <p style="left: 30px; position: relative;"><b>Akshay B A</b></p>
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div id="parent2" class="customDiv4 card card-body" style="height: 330px; width: 330px">
+                <img src="{{url_for('static', filename='images/bharat.jpg')}}" style="width:360px;height: 370px;top: -20px;left: -21px;position: relative;">
+                
+            </div>
+            <div id="popup2" style="width: 300px; top: 10px; position: relative;">
+                <p style="left: 30px; position: relative;"><b>Bharath S</b></p>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div id="parent2" class="customDiv4 card card-body" style="height: 330px; width: 330px">
+                <img src="{{url_for('static', filename='images/lohith.jpg')}}" style="width:560px;height: 330px;top: -20px;left: -220px;position: relative;">
+                
+            </div>
+            <div id="popup2" style="width: 300px; top: 10px; position: relative;">
+                <p style="left: 30px; position: relative;"><b>Lohith P</b></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+  .ht
+    {
+      background-color: ivory;
+      top: 0px;
+      left: 410px;
+      width: 690px;
+      position: relative;
+      animation-name: example1;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;  
+    }
+
+      @keyframes example1 {
+        0% {transform: rotate(0deg);}
+        10%  {transform: rotate(2deg);}
+        20%  {transform: rotate(-2deg);}
+        30%  {transform: rotate(2deg);}
+        40% {transform: rotate(-2deg);}
+        50% {transform: rotate(0deg);}
+        60% {transform: rotate(0deg);}
+        70% {transform: rotate(0deg);}
+        80% {transform: rotate(0deg);}
+        90% {transform: rotate(0deg);}
+        100% {transform: rotate(0deg);}
+      }
+</style>
+
+<p class="three ht"><b>Happy travelling!</b></p>
+<br>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon ico') }}">
+
+    
+
+<div class="contactBg">
+    <h4>You may also contact us on Telephone no : +91 9844012345 <br> and also on social media</h4>
+
+<i class="fa fa-facebook-square" style="font-size:48px;color:blue;padding-top: 20px;"></i>
+<i class="fa fa-instagram" style="font-size:48px;color:brown;padding-left: 40px;padding-right: 40px;"></i>
+<i class="fa fa-twitter" style="font-size:48px;color:red"></i>
+<br><br>
+</div>  
+
+
+{% endblock content %}

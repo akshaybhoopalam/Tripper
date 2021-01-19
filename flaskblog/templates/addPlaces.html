@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    body
+    {
+        background-color: white;
+    }
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='register_style.css') }}">
+
+<div style="top: 70px;position: relative;">
+
+    <div class="content-section" style="position: static; left: 190px; top: 80px; z-index: -1; padding-top: 10px;">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">
+                    <h2 style="color: orangered;">ADD PLACE</h2>
+                </legend>
+                <span class="input-group-addon">Please select</span>
+                <br><br>
+                      <select name="subplaces_city" class="selectpicker form-control">
+                        {% for c in city %}
+                        <option  value="{{ c.city_name}}">{{ c.city_name }}</option>
+                        <h2 >{{ c }}</h2>
+                        {% endfor %}
+                      </select> <br>
+                <div class="form-group">
+                    {{ form.placeName.label(class="form-control-label") }}
+                    {% if form.placeName.errors %}
+                        {{ form.placeName(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.placeName.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.placeName(class="form-control form-control-lg") }}
+                    {% endif %}
+    
+                <label>Categories | </label>
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="check1">
+                    <input type="checkbox" class="form-check-input" id="check1" name="category" value="Nature" checked>Nature
+                  </label>
+                </div>
+
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="check2">
+                    <input type="checkbox" class="form-check-input" id="check2" name="category" value="HillStation">HillStation
+                  </label>
+                </div>
+
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="check1">
+                    <input type="checkbox" class="form-check-input" id="check1" name="category" value="Amusement">Amusement
+                  </label>
+                </div>
+
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="check2">
+                    <input type="checkbox" class="form-check-input" id="check2" name="category" value="Temple">Temple
+                  </label>
+                </div>
+
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="check1">
+                    <input type="checkbox" class="form-check-input" id="check1" name="category" value="Beach">Beach
+                  </label>
+                </div>
+
+                <div class="form-check-inline">
+                  <label class="form-check-label" for="check2">
+                    <input type="checkbox" class="form-check-input" id="check2" name="category" value="Historic">Historic
+                  </label>
+                </div>
+              </div>
+
+                    {{ form.descript.label(class="form-control-label") }}
+                    {% if form.descript.errors %}
+                        {{ form.descript(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.descript.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.descript(class="form-control form-control-lg") }}
+                    {% endif %}
+
+
+                    {{ form.imageUrl.label(class="form-control-label") }}
+                    {% if form.imageUrl.errors %}
+                        {{ form.imageUrl(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.imageUrl.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.imageUrl(class="form-control form-control-lg") }}
+                    {% endif %}
+
+
+                    
+                    {{ form.ratings.label(class="form-control-label") }}
+                    {% if form.ratings.errors %}
+                        {{ form.ratings(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.ratings.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.ratings(class="form-control form-control-lg") }}
+                    {% endif %}
+
+            <div>
+                <button type="submit" class="signupbtn">Add</button>
+                <button type="reset" class="cancelbtn">Clear</button>
+
+            </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>   
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+    <h1 style="color: orangered;">DELETE PLACE</h1>
+    <br>
+    <div>
+        <form class="form-inline" method="POST" action="{{ url_for('test11') }}">
+            <div class="form-group">
+              <div class="input-group">
+                  <label>SELECT PLACE | </label>
+                      <select name="delplace_select" class="selectpicker form-control">
+                        {% for p in place %}
+                        <option  value="{{ p.place_name }}">{{ p.place_name }}</option>
+                        <h2 >{{ p }}</h2>
+                        {% endfor %}
+                      </select>
+              </div>
+              <button type="submit" class="btn btn-default">Go</button>
+            </div>
+          </form>
+         
+    </div>
+
+    
+{% endblock content %}

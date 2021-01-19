@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="container">
+    	<h1 style="color: orangered;">CITIES INFO</h1>
+    	<br>
+    	<div class="row">
+        {% for c in city %}
+   		<div class="col-4"style="margin-bottom: 30px;">
+	    <div class="card" style="width:350px; height: 400px;">
+		  <img id="myImg" class="card-img-top" src="{{ c.imgUrl }}" style="height: 200px" alt="Card image">
+		  <div class="card-body">
+		    <h3 class="card-title">{{ c.city_name }}</h3>
+		    <h4 class="card-text">{{ c.ratings }} <i class="fa fa-star" style="color:yellow;"></i> </h4>
+		    <h4 class="card-text">Category </h4>
+			    {% for c2 in c.category %}
+			    	{{ c2 }} &emsp;
+			    {% endfor %}
+		  </div>
+		</div>
+		</div>
+		{% endfor %}
+		</div>
+<!-- https://wallpaperaccess.com/full/534288.jpg
+https://newevolutiondesigns.com/images/freebies/car-wallpaper-1.jpg
+https://cdn.wallpapersafari.com/6/78/P5mVfL.jpg -->
+	</div>
+{% endblock content %}

@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<body bgcolor="ivory"></body>
+<title>Recommendations</title>
+<script src="{{url_for('static', filename='js/cardScript.js')}}"></script>
+<style type="text/css">
+    
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  min-width: 780px;
+  width: 100%;
+  height: 500px;
+}
+
+.card {
+  position: relative;
+  background-color: #FFFFFF;
+  height: 370px;
+  width: 240px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  transition: height 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  height: 410px;
+  box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.5);
+}
+
+.card-image {
+  /* center horizontally overflown image */
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+
+  height: 220px;
+  min-width: 100%;
+  transition: height 0.3s, opacity 0.3s;
+}
+.card-image.selected {
+  height: 410px;
+  opacity: 0.3;
+}
+.card-footer {
+    background-color: white;
+  position: absolute;
+  bottom: 0;
+  height: 130px;
+  padding: 10px 15px;
+  font-family: Helvetica;
+}
+
+.card-text {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.card-title {
+  font-family: Serif;
+}
+.card-author {
+  font-size: 14px;
+  color: #BAB096;
+  transition: color 0.3s;
+}
+.card-author.selected {
+  color: #6a6456;
+}
+</style>
+<form action="url_for('cities')">
+<p style="font-size: 45px;color: orangered;padding-left: 570px;padding-top: 80px; ">RECOMMENDING</p>
+
+<div id="app">
+    <div class="card-row">
+    {% for o in fin %}
+    <div 
+      v-for="(card, index) in cards" 
+      :key="index" 
+      :ref="`card_${index}`"
+      @mouseover="hoverCard(index)"
+      @mouseout="hoverCard(-1)"
+      class="card">
+      
+      <img class="card-image" src="https://miro.medium.com/max/3840/1*1r41lfYuNwShN4fjqAeb5w.jpeg">
+      
+      <div class="card-footer">
+        <!-- <p class="card-text">RECIPE</p> -->
+        <h1 class="card-title">{{ o }}</h1>
+        <!-- <p class="card-text">Visit</p> -->
+        <button type="button" class="btn btn-light" name="visit" value="{{ o }}">Visit</button>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+</form>
+
+
+{% endblock content %}

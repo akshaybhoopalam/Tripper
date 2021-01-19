@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+    body
+    {
+        background-color: white;
+    }
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='register_style.css') }}">
+
+<div style="top: 80px;position: relative;">
+
+    <legend class="border-bottom mb-4">
+        <h2 style="color: orangered;">CITY</h2>
+    </legend>
+
+<div class="card bg-info text-white">
+    <div class="card-body">
+        <a href="{{ url_for('viewCities') }}" class="btn stretched-link">Cities Info</a>
+    </div>
+</div>
+<br>
+<div class="card bg-success text-white">
+    <div class="card-body">
+        <a href="{{ url_for('addCities') }}" class="btn stretched-link">Add City</a>
+    </div>
+</div>
+<br>
+<div class="card bg-danger text-white">
+    <div class="card-body">
+        <a href="{{ url_for('deleteCities') }}" class="btn stretched-link">Delete City</a>
+    </div>
+</div>
+<br>
+<div class="card bg-warning text-white">
+    <div class="card-body">
+        <a href="{{ url_for('updateCities') }}" class="btn stretched-link">Update City</a>
+    </div>
+</div>
+<hr>
+<br>
+
+    <legend class="border-bottom mb-4">
+        <h2 style="color: orangered;">PLACE</h2>
+    </legend>
+
+<div class="card bg-info text-white">
+    <div class="card-body">
+        <a href="{{ url_for('viewPlaces') }}" class="btn stretched-link">Places Info</a>
+    </div>
+</div>
+<br>
+<div class="card bg-success text-white">
+    <div class="card-body">
+        <a href="{{ url_for('addPlaces') }}" class="btn stretched-link">Add Place</a>
+    </div>
+</div>
+<br>
+<div class="card bg-danger text-white">
+    <div class="card-body">
+        <a href="{{ url_for('deletePlaces') }}" class="btn stretched-link">Delete Place</a>
+    </div>
+</div>
+<br>
+<div class="card bg-warning text-white">
+    <div class="card-body">
+        <a href="{{ url_for('updatePlaces') }}" class="btn stretched-link">Update Place</a>
+    </div>
+</div>
+<hr>
+<br>
+</div>   
+{% endblock content %}

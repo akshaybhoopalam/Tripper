@@ -1,0 +1,185 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+<style>
+	img
+	{
+		width: 100%;
+		height: 400px;
+	}
+
+	h3,h4
+	{
+		font-family: Comic Sans MS, cursive;
+	}
+
+	i
+	{
+		text-shadow:2px 2px 3px lightgray;
+	}
+</style>
+ 
+<div id="demo" class="container carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+      <article class="media">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-5" style="font-size: 45px;"><b>BANNERGHATTA FOREST</b></a>
+              <p class="text-muted">
+	              <h4>Ratings : <b>4</b>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		          </h4>
+
+	          </p>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{url_for('static', filename='images/peacock.svg')}}">
+                <div class="carousel-caption">
+                  <!-- <p class="article-content">Bannerghatta</p> -->
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/some-cute-animal.jpg')}}">
+                <div class="carousel-caption">
+                  <!-- <p class="article-content">Yaana</p> -->
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="{{url_for('static', filename='images/tiger_in_zoo.jpg')}}">
+                <div class="carousel-caption">
+                  <!-- <p class="article-content">Gaganachuki</p> -->
+                </div>
+              </div>
+            </div>
+        </div>
+      </article>
+    
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<div class="container">
+	<hr>
+<br>
+  <h3>Travel period / Distance : </h3>
+  <h4 style="padding-left: 2em;">
+  	50 min (24.7 km) via Bannerghatta Main Rd - Fastest route, lighter traffic than usual<br>
+  	59 min (39.2 km) via NH 48<br>
+  	1 h (37.9 km) via NICE Bangalore Mysore Expressway
+  </h4>
+  <br>
+  <h3>Description : </h3>
+  <h4 style="text-indent: 4em;">
+	  The vision of the Bengaluru Bannerghatta Biological Park is to create an opportunity to the citizens - specially to children of Bangalore Metropolitan City to have a Biological Recreation Center very close to the city in the midst of the forests in the valley of the famous Champakadhama hills inside the Bannerghatta National Park. To accomplish this vision, a mini zoo was created in 1972' which gradually grown into the present Biological Park by 2002. With the creation of Bannerghatta Biological Park, the vision was enlarged to meet the ever growing demands of the Bangaloreans/ tourists from outside for recreation/ education of younger generations; and also to create awareness on the importance of conservation of flora and fauna - the biodiversity of the nature for the benefit of the future generation in addition to the conservation of the gene pool of the endangered species of wild animals of the region/country.
+	</h4>
+	<br>
+	<h3>Season : Months of September to January.</h3>
+	<br>
+	<h3>Timing : 09:30 AM to 5:00 PM</h3>
+<br>
+<br>
+<br>
+
+</div>
+<div class="container-fluid">
+	<a style="font-size: 45px;"><b>PLACES NEARBY TO VISIT IN BHANNERGATTA</b></a>
+	<br><br><br>
+
+	<div class="card-deck">
+	    
+	    <div class="card" style="width:400px">
+		    <img class="card-img-top" src="{{url_for('static', filename='images/tiger_in_zoo.jpg')}}" alt="Card image" style="width:100%">
+		    <div class="card-body">
+		      <h4 class="card-title">Bannerghatta Biological Park</h4>
+		      <h5><b>4</b>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		        </h5>
+		      <p class="card-text">
+		      	Bannerghatta National Park, near Bangalore, Karnataka, was founded in 1970 and declared as a national park in 1974. In 2002 a portion of the park, became a biological reserve, the Bannerghatta Biological Park. It is a popular tourist destination with a zoo, a pet corner, an animal rescue centre, a butterfly enclosure, an aquarium, a snake house and a safari park.
+		      </p>
+		      <a href="#" class="stretched-link"></a>
+		    </div> 
+	    </div>
+
+	    <div class="card" style="width:400px">
+		    <div class="card-body">
+		      <h4 class="card-title">Bannerghatta Safari</h4>
+		      <h5><b>4</b>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		        </h5>
+		      <p class="card-text">
+		      	Safari in the natural forest is expedition to observe the free range wild animals in their natural habitat. The visitors in the secured safari vehicle are allowed inside the safari, will have the thrill of wilderness by seeing them in the midst of the forest through a keen and closed observation. The Bengaluru Bannerghatta Biological Park is one of the pioneers in providing this facility to the visiting public.
+		      </p>
+		      <a href="#" class="stretched-link"></a>
+		    </div> 
+		    <img class="card-img-top" src="{{url_for('static', filename='images/bannerghatta-safari.jpg')}}" alt="Card image" style="width:100%">
+	    </div>
+
+	    <div class="card" style="width:400px">
+	    	<img class="card-img-top" src="{{url_for('static', filename='images/butterfly-park.jpg')}}" alt="Card image" style="width:100%">
+		    <div class="card-body">
+		      <h4 class="card-title">Butterfly Park</h4>
+		      <h5><b>4</b>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		        </h5>
+		      <p class="card-text">
+		      	Butterflies have a special place in the insect world. The names such as “Flying Jewels” indicate that butterflies are considered as being beautiful, elusive and fascinating. The Park was conceptualized as one integrated center that would support education, conservation and research activities with exclusive focus on butterflies as flagship ambassadors of conservation.
+		      </p>
+		      <a href="#" class="stretched-link"></a>
+		    </div> 
+	    </div>
+
+	    <div class="card" style="width:400px">
+		    
+		    <div class="card-body">
+		      <h4 class="card-title">Bannerghatta Nature Camp-Jungle Lodges</h4>
+		      <h5><b>4</b>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		              <i class="fa fa-star" style="color:yellow;"></i>
+		        </h5>
+		      <p class="card-text">
+		      	This relaxed, rural safari lodge lies in a rehabilitation facility for lions and tigers rescued from circuses. It's 8 km from both the Bannerghatta Zoo and the Butterfly Park. The rustic tents, log huts and wood cottages include en suite bathrooms and fans; some have air-conditioning for a fee. There's also a no-nonsense dorm with 32 beds.There's also an amphitheatre, and campfires are offered.
+		      </p>
+		      <a href="#" class="stretched-link"></a>
+		    </div> 
+		    <img class="card-img-top" src="{{url_for('static', filename='images/bannerghatta-nature-camp.jpg')}}" alt="Card image" style="width:100%">
+	    </div>
+
+	</div>
+
+</div>
+<br><br>
+<hr>
+
+{% endblock content %}
